@@ -3,13 +3,19 @@
 ## Getting started
 
 ### Create new python venv
+```sh
 python3.13 -m venv .
+```
 
 ### Activate
+```sh
 source ./bin/activate
+```
 
 ### Install requirements
+```sh
 pip install -r requirements.txt
+```
 
 ### Export secrets
 
@@ -19,15 +25,21 @@ pip install -r requirements.txt
 > export your AWS user and secret from SSO or for a User with a secret created. 
 
 #### PagerDuty
-export PAGERDUTY_USER_API_KEY='xxxxxxx' 
+```sh
+export PAGERDUTY_USER_API_KEY='xxxxxxx'
+```
 
 #### GitHub
 
 > GitHub PAT which has at least read access
+```sh
 export GITHUB_TOKEN=ghp_xxxxx
+```
 
 #### AWS Bedrock Knowledge Base
 
 > AWS Bedrock Knowledge Base if you have it
+```sh
 export AWS_REGION=us-west-2
 export KNOWLEDGE_BASE_ID=XXXXXX
+```
