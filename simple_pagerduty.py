@@ -1,5 +1,4 @@
 # Global imports
-from json import tool
 import os
 # MCP
 from mcp.client.streamable_http import streamablehttp_client
@@ -9,8 +8,6 @@ from strands import Agent
 from strands.tools.mcp.mcp_client import MCPClient
 from strands.models import BedrockModel
 from strands_tools import calculator, current_time
-# Logging
-import logging
 
 # User question to start
 user_question = "Find all active issues over the last 4 hours, find critical outages, and research potential code changes that caused those issues."
@@ -36,7 +33,7 @@ def build_pagerduty_mcp_client():
                 #"--enable-write-tools"  # This flag enables write operations on the MCP Server enabling you to create issues, pull requests, etc.
             ],
             env={
-                "PAGERDUTY_HOST": "https://api.practicefusion.pagerduty.com",
+                "PAGERDUTY_HOST": "https://api.my_company.pagerduty.com",
                 "PAGERDUTY_USER_API_KEY": os.getenv("PAGERDUTY_USER_API_KEY")
             },
         )
